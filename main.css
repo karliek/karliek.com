@@ -1,0 +1,140 @@
+body {
+	font-family: "adelle", "courier new";
+	font-style: normal;
+	font-weight: 300;
+	font-size: 16px;
+	color: #222;
+	background-color: #e4e5e0;
+	text-align: center;
+	line-height: 24px;
+
+}
+a, a:visited {
+	color: #222;
+	text-decoration: none;
+}
+a:hover {
+	color: #f47c8c;
+}
+
+.nav a {
+	color: #e4e5e0;
+	text-decoration: none;
+}
+.nav a:hover {
+	color: #fff;
+}
+header {
+	width: 100%;
+	height: 160px;
+	background-color: #f47c8c;
+	padding-top: 80px;
+	letter-spacing: .2em;
+}
+	.circle {
+		border-radius: 50%;
+		width: 70px;
+		height: 70px;
+		background-color: #222;
+		display: inline-block;
+		transition: 150;
+	}
+	/*.circle:hover {
+		background-color: #e77147;
+	}*/
+	.header-font {
+		color: #fff;
+		font-family: "refrigerator-deluxe",sans-serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 42pt;
+		line-height: 70px;
+		transition: 150;
+	}
+	#first {
+		display: inline;
+	}
+	#subhead {
+		color: #e4e5e0;
+		padding-top: 20px;
+		letter-spacing: .15em;
+		line-height: 20px;
+		font-weight: 100;
+		font-size: 14px;
+	}
+
+.header-font-minimized {
+	font-size: 22pt;
+	line-height: 40px;
+}
+
+.circle-minimized {
+	width: 40px;
+	height: 40px;
+}
+
+.header-minimized {
+	position: fixed;
+	height: 50px;
+	top: 0;
+	padding-top: 10px;
+	z-index: 10;
+}
+
+section {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.nav {
+	width: 100%;
+	height: 50px;
+	background-color: #e77147;
+	padding-top: 30px;
+	padding-bottom: 0;
+	font-family: "refrigerator-deluxe", sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+
+    position:absolute;
+    top: 240px;
+    z-index: 10;
+}
+.fixed {
+    position:fixed;
+    top: 60;
+
+}
+
+#contact-link {
+	margin: 0 24px 0 24px ;
+}
+
+.example.hello {
+	margin-top: 80px;
+}
+
+.example.hello.hello-minimized {
+	margin-top: 320px;
+}
+
+.example .ocarousel_window {
+	width: 960px;
+	height: 900px;
+	margin: auto;
+}
+h1 {
+	color: #9a9a9a;
+	font-family: "refrigerator-deluxe",sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 28pt;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.contact {
+	background-color: #fff;
+
+}
+

@@ -1,0 +1,191 @@
+<html>
+
+	<head>
+		<script type="text/javascript" src="//use.typekit.net/qzv1qpg.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script src="jquery.openCarousel.js"></script>
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<link rel="stylesheet" type="text/css" href="jquery.openCarousel.css">
+		<link rel="stylesheet" type="text/css" href="main.css">
+
+	</head>
+
+	<body>
+
+		<header>
+			<div id="first" class="header-font">KARLIE</div>
+			<div class="circle header-font">K</div>
+			<div id="subhead">
+				interactive media design
+			</div>
+		</header>
+
+		<section class="nav">
+			<a id="nav_work" href="#">work</a> 
+			<span id="contact-link"><a id="nav_contact" href="#">contact</a> </span>
+			<a id="nav_resume" href="#">resume</a>
+		</section>
+
+		<section class="example hello">
+			<h1>hello!</h1>
+			<div id="profile-pic"><img src="profilepic.jpg"/></div>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+		</section>
+		
+		<section id="work" class="example">
+			<h1>pica</h1>
+			<div class="ocarousel" data-ocarousel-speed="250" data-ocarousel-transition="fade" data-ocarousel-period="Infinity">
+
+				<div class="ocarousel_window">
+
+					<img src="pica/pica_01.jpg"></img>
+					<img src="pica/pica_02.jpg"></img>
+					<img src="pica/pica_03.jpg"></img>
+					<img src="pica/pica_04.jpg"></img>
+
+				</div>
+				<div class="ocarousel_indicators"></div>
+			</div>
+		</section>
+
+		<section id="contact" class="contact">
+			<h1>contact</h1>
+			karlie.kirkaldie@gmail.com <br/>
+			503-477-1987<br/>
+			<a href="http://www.linkedin.com/pub/karlie-kirkaldie/b/5a8/369" target="_blank"><img src="linkedin.png"></a>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			
+		</section>
+		<section id="resume" class="resume">
+			<h1>resume</h1>
+			<a href="https://dl.dropbox.com/s/ygjy9jcsdk5j16o/karlie-kirkaldie_resume.pdf" target="_blank">Download PDF</a>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+
+		</section>
+
+		<footer>
+			<h1>footer!</h1>
+			footer!
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+		</footer>
+
+	</body>
+
+	<script type="text/javascript">
+
+		function addScrollTo(linkId, targetId) {
+			$("#" + linkId).on('click', function(e) {
+				e.preventDefault();
+			    $('html, body').animate({
+			        scrollTop: $("#" + targetId).offset().top - 140
+			    }, 1000);
+			});
+
+		}
+
+		$(document).ready(function(){
+
+			// clear typekit badge
+			window.setTimeout(function() {
+				$('.typekit-badge').css('display', 'none');
+			}, 0);
+
+			var num = 180; //number of pixels before modifying styles
+
+			$(window).bind('scroll', function () {
+				if ($(window).scrollTop() > num) {
+					$('.nav').addClass('fixed');
+					$('.header-font').addClass('header-font-minimized');
+					$('.circle').addClass('circle-minimized');
+					$('header').addClass('header-minimized');
+					$('#subhead').hide();
+					$('.example.hello').addClass('hello-minimized');
+
+				} else {
+					$('.nav').removeClass('fixed');
+					$('.header-font').removeClass('header-font-minimized');
+					$('.circle').removeClass('circle-minimized');
+					$('header').removeClass('header-minimized');
+					$('#subhead').show();
+					$('.example.hello').removeClass('hello-minimized');
+				}
+			});
+
+			addScrollTo('nav_work', 'work');
+			addScrollTo('nav_contact', 'contact');
+			addScrollTo('nav_resume', 'resume');
+
+		});
+
+	</script>
+
+</html>

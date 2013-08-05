@@ -1,3 +1,8 @@
+/* http://themergency.com/css-clearfix-demystified/ */
+.cf:before, .cf:after { content: ""; display: table; }
+.cf:after { clear: both; }
+.cf { zoom: 1; }
+
 body {
 	font-family: "adelle", "courier new";
 	font-style: normal;
@@ -114,7 +119,9 @@ section {
 
 .example.hello {
 	margin-top: 60px;
+	
 }
+
 
 .example.hello.hello-minimized {
 	margin-top: 300px;
@@ -125,6 +132,15 @@ section {
 	height: 900px;
 	margin: auto;
 }
+#profile-pic {
+	float: left;
+	margin-right: 20px;
+}
+#intro-copy {
+	text-align: left;
+	margin-left: auto;
+
+}
 h1 {
 	color: #9a9a9a;
 	font-family: "refrigerator-deluxe",sans-serif;
@@ -134,6 +150,52 @@ h1 {
 	text-transform: uppercase;
 	margin-bottom: 20px;
 }
+/*h2 {
+	color: #9a9a9a;
+	font-family: "refrigerator-deluxe",sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 18pt;
+	text-transform: uppercase;
+}*/
+
+p {
+	max-width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: left;
+
+
+}
+
+.left {
+	float: left;
+}
+
+
+
+.skills {
+	width: 100%;
+}
+	.skills-inner {
+		width: 80%;
+		margin: auto;
+	}
+		.skills .skills-inner ul {
+			width: 50%;
+		}
+			.skills .skills-inner ul li {
+				text-align: left;
+				color: #9a9a9a;
+				font-family: "refrigerator-deluxe",sans-serif;
+				font-style: normal;
+				font-weight: 300;
+				font-size: 18pt;
+				text-transform: uppercase;
+			}
+
+
+
 .contact {
 	background-color: #fff;
 

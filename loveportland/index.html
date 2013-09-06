@@ -1,0 +1,274 @@
+<html>
+
+	<head>
+		
+		<style type="text/css">
+			/* http://themergency.com/css-clearfix-demystified/ */
+			/*.cf:before, .cf:after { content: "header-font"; display: table; }
+			.cf:after { clear: both; }
+			.cf { zoom: 1; }*/
+
+			/*@font-face {
+				font-family: "loveoregon";
+			    src: url("loveoregon.woff") format('woff'),
+			    	url("loveoregon.ttf") format('ttf'),
+					url("loveoregon.eot") format('eot');
+			}*/
+
+			@font-face {
+  				font-family: 'loveoregon';
+  				src: url('loveoregon.eot?') format('eot'), url('loveoregon.woff') format('woff'), url('loveoregon.ttf') format('truetype');
+			}
+
+
+			@font-face {
+  				font-family: 'timbers';
+  				src: url('timbers.eot?') format('eot'), url('timbers.woff') format('woff'), url('timbers.ttf') format('truetype');
+			}
+
+			@font-face {
+  				font-family: 'blazers';
+  				src: url('blazers.eot?') format('eot'), url('blazers.woff') format('woff'), url('blazers.ttf') format('truetype');
+			}
+
+			@font-face {
+  				font-family: 'stjohns';
+  				src: url('stjohns.eot?') format('eot'), url('stjohns.woff') format('woff'), url('stjohns.ttf') format('truetype');
+			}
+
+			/*@font-face {
+				font-family: "timbers";
+			    src: url("timbers.woff") format('woff'),
+			    	url("timbers.ttf") format('ttf'),
+			    	url("timbers.eot") format('eot');
+			}
+*/
+			/*@font-face {
+				font-family: "blazers";
+			    src: url("blazers.woff") format('woff'),
+			    	url("blazers.ttf") format('ttf'),
+			    	url("blazers.eot") format('eot');
+			}*/
+			/*@font-face {src: url("loveoregon.eot");
+  						src: url("loveoregon.eot?#iefix") format("embedded-opentype"), url("loveoregon.woff") format("woff"), url("loveoregon.ttf") format("truetype"), url("loveoregon.svg#esri-Set") format("svg");
+  			}*/
+			body {
+				display: block;
+				margin: 0px;
+				text-align: center;
+				font-family: "adelle", "courier new";
+				font-style: normal;
+				background-color: #e7eaee	
+
+			}
+
+			header {
+				background-color: #dadee4; 
+				padding-top: 60px;
+				padding-bottom: 20px;
+				text-align: center;
+
+			}
+
+			p {
+				padding-top: 40px;
+				font-size: 16pt;
+				font-weight: 100;
+				color: #545454;
+				margin-right: 100px;
+				margin-left: 100px;
+
+				/*text-align: center;*/
+				 
+			}
+
+			#subhead {
+				
+				padding-top: 20px;
+				font-family: "adelle";
+				font-weight: 100;
+				font-style: normal;
+				font-size: 12pt;
+				letter-spacing: .10em;
+				
+			}
+
+			#iconset{
+				padding-top: 80px;
+			}
+
+			#first {
+				padding-bottom: 48px;
+				height: 20px;
+				background-color: #afb3b8;
+			}
+
+			/*.main-content {
+				padding-top: 40px;
+				font-size: 16pt;
+				font-weight: 100;
+				color: #545454;
+				text-align: center;
+				max-width: 80%;
+
+			}*/
+			/*#content {
+				text-align: center;
+				max-width: 80%;
+			}*/
+
+			#content a {
+				color: #545454;
+				
+			}
+			#content a:hover {
+				
+				background-color: #fff;
+			}
+
+			.header-font {
+			color: #4a4241;
+			font-family: "refrigerator-deluxe",sans-serif;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 36pt;
+			line-height: 70px;
+			text-transform: uppercase;
+			}
+
+			.icon {
+				-webkit-font-feature-settings: "liga","dlig";
+				-moz-font-feature-settings: "liga=1, dlig=1";
+				-moz-font-feature-settings: "liga","dlig";
+				-ms-font-feature-settings: "liga","dlig";
+				-o-font-feature-settings: "liga","dlig";
+				font-feature-settings: "liga","dlig";
+			}
+
+			.loveoregon {
+				color: #000;
+				font-family: "loveoregon";
+				line-height: 1;
+				font-size: 15em;
+			}
+
+			.loveoregon:after {
+				content: "loveoregonfront";
+				color: #01833d;
+				margin-left: -1em;
+			}
+
+			.loveoregon:before {
+				content: "loveoregonback";
+				color: #fff;
+				margin-right: -1em;
+				
+			}
+			
+			.timbers {
+				color: #ede400;
+				font-family: "timbers";
+				
+				line-height: 1;
+				font-size: 15em;
+			}
+
+			.timbers:after {
+				content: "timbersfront";
+				color: #fff;
+				margin-left: -1em;
+			}
+
+			.timbers:before {
+				content: "timbersback";
+				color: #064704;
+				margin-right: -1em;
+				
+			}
+
+			.blazers {
+				color: #d01f26;
+				font-family: "blazers";
+				
+				line-height: 1;
+				font-size: 15em;
+			}
+
+			.blazers:after {
+				content: "blazersfront";
+				color: #efefef;
+				margin-left: -1em;
+			}
+
+			.blazers:before {
+				content: "blazersback";
+				color: #000;
+				margin-right: -1em;
+				
+			}
+			.stjohns {
+				color: #338a7b;
+				font-family: "stjohns";
+				line-height: 1;
+				font-size: 15em;
+			}
+
+			.stjohns:after {
+				content: "stjohnsfront";
+				color: #000;
+				margin-left: -1em;
+			}
+
+			.stjohns:before {
+				content: "stjohnsback";
+				color: #fff;
+				margin-right: -1em;
+				
+			}
+
+
+
+		</style>
+
+	</head>
+		<script type="text/javascript" src="//use.typekit.net/qzv1qpg.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+			// clear typekit badge
+			window.setTimeout(function() {
+				$('.typekit-badge').css('display', 'none');
+			}, 0);
+			});
+		</script>
+
+	<body>
+			
+
+			<header>
+			<div id="first" class="header-font">Love Portland</div>
+			<div id="subhead">a three-color icon font project</div>
+			</header>	
+
+				<div id="content"><p>These are some Portland-themed icons I created using the ligature-enabled three-color icon font technique from
+				 <a href="https://github.com/nikolaswise/three-color-icons" target="_blank">Nikolas Wise</a> and <a href="http://icomoon.io/" target="_blank">IcoMoon</a> icon font creation. </p></div>
+			
+			
+
+			<div id="iconset">
+				<span class="icon loveoregon">loveoregon</span>
+				<span class="icon timbers">timbers</span>
+				<span class="icon blazers">blazers</span>
+				<span class="icon stjohns">stjohns</span>
+			</div>
+			
+
+
+
+	
+
+	</body>
+
+</html>

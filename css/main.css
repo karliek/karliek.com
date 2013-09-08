@@ -93,12 +93,163 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+html {
+    height: 100%;
+}
 
+body {
+    font-family: "source-sans-pro", "courier new";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: #e4e4dc;
+    text-align: left;
+    line-height: 24px;
+    background-image: url('../img/dots.gif');
+    min-height: 100%;
+}
 
+header {
+    width: 100%;
+    background-image: url('../img/cubes.gif');
+}
 
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding-left: 20px;
+}
 
+.header-block {
+    max-width: 960px;
+    margin: auto;
+    padding-top: 90px;
+    padding-left: 20px;
+    height: 180px;
+}
 
+#header-font {
+    color: #fff;
+    font-family: "source-sans-pro",sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42pt;
+    text-align: left;
+    letter-spacing: .1em;
+}
 
+#subhead {
+    color: #fff;
+    font-style: italic;
+    font-weight: 200;
+    padding-top: 20px;
+    letter-spacing: .15em;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 30px;
+}
+
+#logo-block {
+    width: 480px;
+    padding-bottom: 50px;
+    float: left;
+    margin: auto;
+}
+
+#nav {
+    color: #fff;
+    font-family: "source-sans-pro", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    padding-top: 10px;
+}
+    #nav a {
+        color: #fff;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+    }
+    #nav a:hover, #nav .active {
+        background-color: #ef644c;
+    }
+
+#skills {
+    font-family: "source-sans-pro", sans-serif;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 14pt;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 36px;
+    letter-spacing: .1em;
+}
+
+    #skills li {
+            float: left;
+            list-style: none;
+        }
+    #skills li.mobile {
+        float: none;
+        text-align: left;
+    }
+        #skills li.separator.mobile {
+            display: none;
+        }
+
+    #skills li.separator {
+            width: 72px;
+            height: 72px;
+            background-image: url('../img/divider.png');
+            background-repeat: no-repeat;
+            margin-left: 40px;
+            margin-right: 40px;
+
+    }
+
+    #hello-block {
+        float:left;
+        width: 260px;
+        padding-top: 80px;
+        padding-bottom: 0px;     
+    }
+
+    #intro-block {
+        float:left;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+        #intro-1 {
+            font-family: "learning-curve", "courier new";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 100pt;
+            margin-bottom: 20px;
+            text-align: left;
+            
+        }
+
+        #intro-2 {
+            font-family: "source-sans-pro", sans-serif;
+            font-style: normal;
+            font-weight:200;
+            text-transform: uppercase;
+            font-size: 24pt;
+            letter-spacing: .1em;
+            line-height: 36px;
+        }
+
+        #intro-3 {
+            font-family: "lexia", "courier new";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18pt;
+            margin-bottom: 20px;
+            letter-spacing: .1em;
+            
+        }
 
 
 

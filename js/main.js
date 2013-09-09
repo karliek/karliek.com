@@ -4,12 +4,22 @@ window.setTimeout(function() {
 }, 0);
 
 var beResponsive = function() {
-	if ($(window).width() < 840) {
-		$('#skills li, #logo-block, #nav').addClass('mobile');
+	if ($(window).width() < 960) {
+		$('#skills li, #logo-block, #nav, header .column').addClass('mobile');
 	} else {
-		$('#skills li, #logo-block, #nav').removeClass('mobile');
+		$('#skills li, #logo-block, #nav, header .column').removeClass('mobile');
 	}
 };
+
+// var beResponsive = function() {
+// 	if ($(window).width() < 960) {
+// 		// $('#skills li, #logo-block, #nav, header .column').addClass('mobile');
+// 		$('#skills li, header .column').addClass('mobile');
+// 	} else {
+// 		// $('#skills li, #logo-block, #nav, header .column').removeClass('mobile');
+// 		$('#skills li, header .column').removeClass('mobile');
+// 	}
+// };
 
 // set the responsive handler for resizing
 $(window).on('resize', beResponsive);

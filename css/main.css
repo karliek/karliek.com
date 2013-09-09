@@ -106,35 +106,29 @@ body {
     font-size: 18px;
     color: #e4e4dc;
     text-align: left;
-    line-height: 24px;
     background-image: url('../img/dots.gif');
     min-height: 100%;
+}
+
+.container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 header {
     width: 100%;
     background-image: url('../img/cubes.gif');
-
-
 }
-
-.container {
-    max-width: 960px;
-    margin: auto;
-    padding-left: 60px;
-    padding-right: 20px;
-    
-}
-
-.header-block {
-    max-width: 960px;
-    margin: auto;
-    padding-top: 120px;
-    padding-left: 60px;
-    height: 180px;
-
-
-}
+    header .column {
+        width: 480px;
+        height: 300px;
+        float: left;
+        text-align: center;
+    }
+    header .column.mobile {
+        height: 180px;
+    }
 
 #header-font {
     color: #fff;
@@ -142,36 +136,21 @@ header {
     font-style: normal;
     font-weight: 700;
     font-size: 42pt;
-    /*text-align: left;*/
     letter-spacing: .1em;
+    padding-top: 90px;
 }
 
 #subhead {
     color: #fff;
     font-style: italic;
     font-weight: 200;
-    padding-top: 20px;
     letter-spacing: .15em;
     font-size: 18px;
-    text-align: left;
-    padding-left: 30px;
 }
 
-#logo-block {
-    width: 380px;
-    padding-bottom: 50px;
+#logo-block { 
     float: left;
-
-
-    /*margin: auto;*/
 }
-    /*#logo-block.mobile {
-        float: none;
-        padding-bottom: 30px;
-        margin: auto;
-        padding-left: 50px
-    }*/
-
 
 #nav {
     
@@ -182,7 +161,7 @@ header {
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: .1em;
-    padding-top: 10px;
+    padding-top: 130px;
     float: left;
     width: 460px;
 
@@ -201,11 +180,7 @@ header {
         padding-right: 30px;
     }
 
-    /*#nav.mobile {
-        width: 460px;
-        float: none;
-        margin: auto;
-    }*/
+
 
 #skills {
     font-family: "source-sans-pro", sans-serif;
@@ -217,23 +192,20 @@ header {
     line-height: 36px;
     letter-spacing: .1em;
     width: 960px;
-
-    /*margin: auto;*/
+    margin: auto;
 }
 
     #skills li {
             float: left;
             list-style: none;
-
         }
     #skills li.mobile {
         float: none;
         text-align: left;
-
-    }
+        }
         #skills li.separator.mobile {
             display: none;
-        }
+            }
 
     #skills li.separator {
             width: 72px;
@@ -242,13 +214,12 @@ header {
             background-repeat: no-repeat;
             margin-left: 40px;
             margin-right: 40px;
+        }
 
-    }
-
-    #hello-block {
+#hello-block {
         float:left;
         width: 260px;
-        padding-top: 80px;
+        /*padding-top: 80px;*/
         padding-bottom: 0px;     
     }
 

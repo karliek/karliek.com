@@ -92,7 +92,9 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+ul {
+    -webkit-padding-start: 0;
+}
 html {
     height: 100%;
 }
@@ -112,12 +114,16 @@ body {
 header {
     width: 100%;
     background-image: url('../img/cubes.gif');
+
 }
 
 .container {
     max-width: 960px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 20px;
+    padding-right: 20px;
+    
 }
 
 .header-block {
@@ -125,7 +131,8 @@ header {
     margin: auto;
     padding-top: 90px;
     padding-left: 20px;
-    height: 180px;
+    height: 160px;
+
 }
 
 #header-font {
@@ -150,11 +157,19 @@ header {
 }
 
 #logo-block {
-    width: 480px;
+    width: 460px;
     padding-bottom: 50px;
     float: left;
-    margin: auto;
+
+    /*margin: auto;*/
 }
+    /*#logo-block.mobile {
+        float: none;
+        padding-bottom: 30px;
+        margin: auto;
+        padding-left: 50px
+    }*/
+
 
 #nav {
     color: #fff;
@@ -165,15 +180,27 @@ header {
     text-transform: uppercase;
     letter-spacing: .1em;
     padding-top: 10px;
+    float: left;
 }
     #nav a {
         color: #fff;
-        padding: 10px 20px 10px 20px;
+        padding: 6px 12px 6px 12px;
         text-decoration: none;
     }
     #nav a:hover, #nav .active {
         background-color: #ef644c;
     }
+
+    #about-link {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    /*#nav.mobile {
+        width: 460px;
+        float: none;
+        margin: auto;
+    }*/
 
 #skills {
     font-family: "source-sans-pro", sans-serif;
@@ -189,10 +216,12 @@ header {
     #skills li {
             float: left;
             list-style: none;
+
         }
     #skills li.mobile {
         float: none;
         text-align: left;
+
     }
         #skills li.separator.mobile {
             display: none;

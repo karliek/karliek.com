@@ -5,9 +5,9 @@ window.setTimeout(function() {
 
 var beResponsive = function() {
 	if ($(window).width() < 840) {
-		$('#skills li').addClass('mobile');
+		$('#skills li, #logo-block, #nav').addClass('mobile');
 	} else {
-		$('#skills li').removeClass('mobile');
+		$('#skills li, #logo-block, #nav').removeClass('mobile');
 	}
 };
 

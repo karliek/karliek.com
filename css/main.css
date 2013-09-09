@@ -115,13 +115,13 @@ header {
     width: 100%;
     background-image: url('../img/cubes.gif');
 
+
 }
 
 .container {
     max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
+    margin: auto;
+    padding-left: 60px;
     padding-right: 20px;
     
 }
@@ -129,9 +129,10 @@ header {
 .header-block {
     max-width: 960px;
     margin: auto;
-    padding-top: 90px;
-    padding-left: 20px;
-    height: 160px;
+    padding-top: 120px;
+    padding-left: 60px;
+    height: 180px;
+
 
 }
 
@@ -141,7 +142,7 @@ header {
     font-style: normal;
     font-weight: 700;
     font-size: 42pt;
-    text-align: left;
+    /*text-align: left;*/
     letter-spacing: .1em;
 }
 
@@ -157,9 +158,10 @@ header {
 }
 
 #logo-block {
-    width: 460px;
+    width: 380px;
     padding-bottom: 50px;
     float: left;
+
 
     /*margin: auto;*/
 }
@@ -172,6 +174,7 @@ header {
 
 
 #nav {
+    
     color: #fff;
     font-family: "source-sans-pro", sans-serif;
     font-style: normal;
@@ -181,6 +184,8 @@ header {
     letter-spacing: .1em;
     padding-top: 10px;
     float: left;
+    width: 460px;
+
 }
     #nav a {
         color: #fff;
@@ -192,8 +197,8 @@ header {
     }
 
     #about-link {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     /*#nav.mobile {
@@ -211,6 +216,9 @@ header {
     text-align: center;
     line-height: 36px;
     letter-spacing: .1em;
+    width: 960px;
+
+    /*margin: auto;*/
 }
 
     #skills li {

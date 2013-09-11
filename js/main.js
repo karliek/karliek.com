@@ -4,22 +4,16 @@ window.setTimeout(function() {
 }, 0);
 
 var beResponsive = function() {
-	if ($(window).width() < 960) {
-		$('#skills li, #logo-block, #nav, header .column').addClass('mobile');
+	if ($(window).width() < 920) {
+		$('#skills li, #logo-block, #nav').addClass('mobile');
+		$('.example div div').removeClass('column');
+		// $('.pica div div').removeClass('column');
 	} else {
-		$('#skills li, #logo-block, #nav, header .column').removeClass('mobile');
+		$('#skills li, #logo-block, #nav').removeClass('mobile');
+		$('.example div div').addClass('column');
+		// $('.pica div div').addClass('column');
 	}
 };
-
-// var beResponsive = function() {
-// 	if ($(window).width() < 960) {
-// 		// $('#skills li, #logo-block, #nav, header .column').addClass('mobile');
-// 		$('#skills li, header .column').addClass('mobile');
-// 	} else {
-// 		// $('#skills li, #logo-block, #nav, header .column').removeClass('mobile');
-// 		$('#skills li, header .column').removeClass('mobile');
-// 	}
-// };
 
 // set the responsive handler for resizing
 $(window).on('resize', beResponsive);
@@ -28,5 +22,7 @@ $(function() {
 
 	// run it once, in case the original load is narrow
 	beResponsive();
+
+
 
 });

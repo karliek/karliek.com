@@ -5,11 +5,11 @@ window.setTimeout(function() {
 
 var beResponsive = function() {
 	if ($(window).width() < 920) {
-		$('#skills li, #logo-block, #nav').addClass('mobile');
+		$('#skills li, #logo-block, #nav, #hello-block, #intro, #intro-block').addClass('mobile');
 		$('.example div div').removeClass('column');
 		// $('.pica div div').removeClass('column');
 	} else {
-		$('#skills li, #logo-block, #nav').removeClass('mobile');
+		$('#skills li, #logo-block, #nav, #hello-block, #intro, #intro-block').removeClass('mobile');
 		$('.example div div').addClass('column');
 		// $('.pica div div').addClass('column');
 	}

@@ -18,9 +18,21 @@ textarea {
     color: #222;
 }
 
-body {
+/*body {
     font-size: 1em;
     line-height: 1.4;
+}*/
+
+body {
+    font-family: "source-sans-pro", "helvetica", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: #ccc;
+    text-align: left;
+    line-height: 24px;
+    background-image: url('../img/dots.gif');
+    min-height: 100%;
 }
 
 /*
@@ -30,12 +42,12 @@ body {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #c39;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #c39;
     text-shadow: none;
 }
 
@@ -43,13 +55,21 @@ body {
  * A better looking default horizontal rule
  */
 
-hr {
+/*hr {
     display: block;
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
     margin: 1em 0;
     padding: 0;
+}*/
+
+hr {
+    border: 0;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    padding-top: 40px;
+    margin-bottom: 60px;
 }
 
 /*
@@ -95,13 +115,14 @@ textarea {
 ul {
     -webkit-padding-start: 0;
 }
+
 html {
     height: 100%;
     width: 100%;
 }
 
-body {
-    font-family: "source-sans-pro", "courier new";
+/*body {
+    font-family: "source-sans-pro", "helvetica", sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
@@ -110,20 +131,56 @@ body {
     line-height: 24px;
     background-image: url('../img/dots.gif');
     min-height: 100%;
-}
+}*/
 
 header {
     width: 100%;
     background-image: url('../img/cubes.gif');
+    /*border-top: 6px solid #906;*/
+    text-align: center;
+    
 }
 
-hr {
+   header .column {
+        width: 50%;
+        height: 180px;
+        float: left;
+        display: inline-block;
+        padding-top: 120px;
+
+    }
+            header.minimized .column {
+                padding-top: 15px;
+            }
+
+    header .column.mobile {
+        width: 100%;
+        height: 40px;
+        float: left;
+        display: block;
+        padding-top: 40px;
+    }
+
+header.minimized {
+    position: fixed;
+    height: 80px;
+    top: 0;
+    padding-top: 10px;
+    z-index: 10;
+}
+/*.header-font-minimized {
+    font-size: 28pt;
+    line-height: 40px;
+    padding-top: 15px;
+}*/
+
+/*hr {
     border: 0;
     border-bottom: 1px solid #302c2c;
     width: 100%;
     padding-top: 40px;
     margin-bottom: 60px;
-}
+}*/
 
 hr.hr2 {
     border: 0;
@@ -133,6 +190,9 @@ hr.hr2 {
     margin-bottom: 60px;
 }
 
+/*::-moz-selection { background: #c39; color: #fff; text-shadow: none; }
+::selection { background: #c39; color: #fff; text-shadow: none; }*/
+
 .container {
     max-width: 960px;
     margin: auto;
@@ -141,7 +201,7 @@ hr.hr2 {
     
 }
 
-.header-block {
+/*.header-block {
     max-width: 960px;
     margin: auto;
     padding-top: 120px;
@@ -149,31 +209,42 @@ hr.hr2 {
     height: 180px;
 
 
-}
+}*/
 
 #header-font {
-    color: #fff;
-    font-family: "source-sans-pro",sans-serif;
+    color: #f2f2f2;
+    font-family: "source-sans-pro", "helvetica", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 42pt;
     letter-spacing: .1em;
+
+    /*padding-top: 120px;*/
 }
 
+#header-font.mobile {
+    font-size: 24pt;
+}
+
+#header-font.minimized {
+    font-size: 30pt;
+}
+
+
 #subhead {
-    color: #fff;
+    color: #f2f2f2;
     font-style: italic;
     font-weight: 200;
     padding-top: 20px;
     letter-spacing: .15em;
     font-size: 18px;
-    text-align: left;
+    /*text-align: left;
     padding-left: 30px;
-}
+*/}
 
 #logo-block {
-    width: 380px;
-    padding-bottom: 50px;
+    /*width: 380px;
+    padding-bottom: 50px;*/
     float: left;
 }
     /*#logo-block.mobile {
@@ -187,39 +258,50 @@ hr.hr2 {
 #nav {
     
     color: #fff;
-    font-family: "source-sans-pro", sans-serif;
+    font-family: "source-sans-pro", "helvetica", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: .1em;
-    padding-top: 10px;
-    float: left;
-    width: 460px;
-
 }
+
+ #nav.column {
+        width: 50%;
+        height: 180px;
+        float: left;
+        display: inline-block;
+        padding-top: 120px;
+    }
     #nav a {
         color: #fff;
-        padding: 6px 12px 6px 12px;
+        padding: 5px 10px 5px 10px;
         text-decoration: none;
     }
     #nav a:hover, #nav .active {
-        background-color: #ef644c;
+        /*background-color: #990066;
+        background-opacity: 50%;*/
+        /* Fall-back for browsers that don't support rgba */
+        background: rgb(153, 0, 102); 
+        background: rgba(153, 0, 102, .4);
+        border-radius: 2px;
     }
 
     #about-link {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    /*#nav.mobile {
-        width: 460px;
+    #nav.mobile {
+        /*width: 100%;*/
         float: none;
         margin: auto;
-    }*/
+        font-size: 10pt;
+        /*display: block;*/
+    }
 
 #skills {
-    font-family: "source-sans-pro", sans-serif;
+    font-family: "source-sans-pro", "helvetica", sans-serif;
     font-style: italic;
     font-weight: 200;
     font-size: 14pt;
@@ -256,25 +338,6 @@ hr.hr2 {
 
     }
 
-    /*#intro {
-        max-width: 960px;
-        padding-top: 40px;
-        
-    }*/
-
-    /*#hello-block {
-        float:left;
-        width: 260px;
-        padding-top: 80px;
-        padding-bottom: 0px;  
-        text-align: center;   
-    }
-
-    #intro-block {
-        float:left;
-        padding-top: 40px;
-        padding-bottom: 20px;
-    }*/
 
     #intro {
         text-align: center;
@@ -298,7 +361,6 @@ hr.hr2 {
     #intro-block.mobile {
         display: block;
         float: left;
-        /*margin: auto;*/
 
     }
 
@@ -315,7 +377,7 @@ hr.hr2 {
         padding-bottom: 40px;
     }
         #intro-1 {
-            font-family: "learning-curve", "courier new";
+            font-family: "learning-curve", "helvetica", sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 100pt;
@@ -324,7 +386,7 @@ hr.hr2 {
         }
 
         #intro-2 {
-            font-family: "source-sans-pro", sans-serif;
+            font-family: "source-sans-pro", "helvetica", sans-serif;
             font-style: normal;
             font-weight:200;
             text-transform: uppercase;
@@ -334,7 +396,7 @@ hr.hr2 {
         }
 
         #intro-3 {
-            font-family: "lexia", "courier new";
+            font-family: "lexia", "courier new", sans-serif;
             font-style: normal;
             font-weight: 700;
             font-size: 16pt;
@@ -357,6 +419,8 @@ hr.hr2 {
 #example {
     padding-bottom: 40px;
     max-width: 960px;
+    /*max-width: 960px;*/
+    margin: auto;
 }
 
 #extra-work {
@@ -372,17 +436,21 @@ hr.hr2 {
 }
 
 #work {
-    max-width: 960px;
-    margin: auto;
+    /*max-width: 960px;
+    margin: auto;*/
 }
 
 #img-grid img {
     padding: 10px;
+    width: auto;
 }
 
+#img-grid img.mobile {
+    width: 100%;
+}
 
 h1 {
-    font-family: "lexia", "courier new";
+    font-family: "lexia", "courier new", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 16pt;
@@ -390,7 +458,7 @@ h1 {
 }
 
 h2 {
-    font-family: "source-sans-pro", sans-serif;
+    font-family: "source-sans-pro", "helvetica", sans-serif;
     font-style: italic;
     font-weight: 200;
     font-size: 12pt;
@@ -398,11 +466,12 @@ h2 {
 }
 
 h3 {
-    font-family: "source-sans-pro", sans-serif;
+    font-family: "source-sans-pro", "helvetica", sans-serif;
     font-style: italic;
     font-weight:200;
     text-transform: uppercase;
     font-size: 24pt;
+    line-height: 30pt;
     letter-spacing: .05em;
 }
 
@@ -432,7 +501,7 @@ a:hover {
 }
 
 #view-url a:hover{
-    background: #c39;
+    background: #906;
     padding: 4px 12px 4px 12px;
     text-decoration: none;
     color: #fff;
@@ -442,23 +511,37 @@ a:hover {
 
 
 img {
-    max-width: 90%;
+    max-width: 100%;
 }
 
 #profilepic {
     float: left;
-    width: 250px;
+    /*width: 250px;*/
+    padding-right: 20px;
+
 
 }
 
 #contact-section {
-
+    /*padding-bottom: 80px;*/
     text-align: center;
+    font-size: 12pt;
+    /*max-width: 960px;*/
 }
 
 #contact-imgs {
-    padding: 40px;
+    width: 170px;
+    height: 170px;
+    padding: 30px;
     float: left;
+    /*margin: auto;*/
+    /*border: 1px dashed #333;*/
+    text-align: center;
+    /*padding-bottom: 100px;*/
+}
+
+#contact {
+    padding-bottom: 60px;
 }
 
 

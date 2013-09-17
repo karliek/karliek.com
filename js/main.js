@@ -8,19 +8,21 @@ var beResponsive = function() {
 		$('#skills li, #logo-block, #nav, header .column, #header-font, #hello-block, #intro, #intro-block').addClass('mobile');
 		$('.example div div').removeClass('column');
 		// $('.pica div div').removeClass('column');
+		// $('#subhead').hide();
 	} else {
 		$('#skills li, #logo-block, #nav, header .column, #header-font, #hello-block, #intro, #intro-block').removeClass('mobile');
 		$('.example div div').addClass('column');
 		// $('.pica div div').addClass('column');
+		// $('#subhead').show();
 	}
 
 	if ($(window).width() <= 480) {
 		$('#other-work img').addClass('mobile');
-		$('#subhead').hide();
+		// $('#subhead').hide();
 		
 	} else {
 		$('#other-work img').removeClass('mobile');
-		$('#subhead').show();
+		// $('#subhead').show();
 		
 	}
 
@@ -45,7 +47,7 @@ $(function() {
 	}
 
 	function navActiveState(windowScrollTop) {
-		windowScrollTop = windowScrollTop + 145;
+		windowScrollTop = windowScrollTop + 300;
 		if (windowScrollTop < workTop) {
 			$('#nav_work, #nav_about, #nav_contact').removeClass('active');
 		} else if (windowScrollTop < aboutTop) {
@@ -65,24 +67,24 @@ $(function() {
 		navActiveState(windowScrollTop);
 
 		// scroll top threshold
-		var num = 200;
+		var num = 125;
 
 		if (windowScrollTop > num) {
-			$('header').addClass('minimized');
+			$('header, #intro').addClass('minimized');
 			// $('.nav').addClass('fixed');
 			// $('.header-font').addClass('header-font-minimized');
 			// $('.circle').addClass('circle-minimized');
 			// $('header').addClass('header-minimized');
-			$('#subhead').hide();
+			// $('#subhead').hide();
 			// $('.example.hello').addClass('hello-minimized');
 
 		} else {
-			$('header').removeClass('minimized');
+			$('header, #intro').removeClass('minimized');
 			// $('.nav').removeClass('fixed');
 			// $('.header-font').removeClass('header-font-minimized');
 			// $('.circle').removeClass('circle-minimized');
 			// $('header').removeClass('header-minimized');
-			$('#subhead').show();
+			// $('#subhead').show();
 		}
 		
 	});
@@ -91,7 +93,7 @@ $(function() {
     	$("#" + linkId).on('click', function(e) {
     		e.preventDefault();
     		$('html, body').animate({
-    			scrollTop: $("#" + targetId).offset().top - 120
+    			scrollTop: $("#" + targetId).offset().top + 300
     		}, 1000);
     	});
     }

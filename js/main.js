@@ -3,42 +3,62 @@ window.setTimeout(function() {
 	$('.typekit-badge').css('display', 'none');
 }, 0);
 
-var beResponsive = function() {
-	if ($(window).width() < 860) {
-		$('#skills li, #logo-block, #nav, header .column, #header-font, #hello-block, #intro, #intro-block').addClass('mobile');
-		$('.example div div').removeClass('column');
-		// $('.pica div div').removeClass('column');
-		$('#subhead').hide();
-	} else {
-		$('#skills li, #logo-block, #nav, header .column, #header-font, #hello-block, #intro, #intro-block').removeClass('mobile');
-		$('.example div div').addClass('column');
-		// $('.pica div div').addClass('column');
-		$('#subhead').show();
-	}
+var isMobileWidth = false;
 
-	if ($(window).width() <= 480) {
-		$('#other-work img').addClass('mobile');
-		// $('#subhead').hide();
-		
-	} else {
-		$('#other-work img').removeClass('mobile');
-		// $('#subhead').show();
-		
-	}
-
-};
-
-// set the responsive handler for resizing
-$(window).on('resize', beResponsive);
+var workTop = $('#work').offset().top,
+	contactTop = $('#contact').offset().top,
+	aboutTop = $('#about').offset().top;
 
 $(function() {
 
+	var beResponsive = function() {
+
+		var toggleMobileClass = '#skills li, ' +
+		                        '#logo-block, ' +
+						        '#nav, ' +
+							    'header .column, ' +
+							    '#header-font, ' + 
+							    '#hello-block, ' +
+							    '#intro, ' +
+							    '#intro-block, ' +
+							    'header, ' +
+							    '#header-bkgd';
+
+		if ($(window).width() < 860) {
+			isMobileWidth = true;
+			$(toggleMobileClass).addClass('mobile');
+			$('.example div div').removeClass('column');
+			// $('.pica div div').removeClass('column');
+			$('#subhead').hide();
+			$('#header-bkgd').removeAttr('style');
+			$('header').removeAttr('style');
+		} else {
+			isMobileWidth = false;
+			$(toggleMobileClass).removeClass('mobile');
+			$('.example div div').addClass('column');
+			// $('.pica div div').addClass('column');
+			$('#subhead').show();
+			sizeHeaderByScrollTop($(window).scrollTop());
+		}
+
+		if ($(window).width() <= 480) {
+			$('#other-work img').addClass('mobile');
+			// $('#subhead').hide();
+			
+		} else {
+			$('#other-work img').removeClass('mobile');
+			// $('#subhead').show();
+			
+		}
+
+	};
+
+	// set the responsive handler for resizing
+	$(window).on('resize', beResponsive);
+
+
 	// run it once, in case the original load is narrow
 	beResponsive();
-
-	var workTop = $('#work').offset().top,
-	    contactTop = $('#contact').offset().top,
-	    aboutTop = $('#about').offset().top;
 
 	function resetTops() {
 		workTop = $('#work').offset().top ,
@@ -47,13 +67,19 @@ $(function() {
 	}
 
 	function navActiveState(windowScrollTop) {
-		windowScrollTop = windowScrollTop + 200;
-		if (windowScrollTop < workTop) {
+
+		if (isMobileWidth) {
+			windowScrollTop = windowScrollTop + 130;
+		} else {
+			windowScrollTop = windowScrollTop + 100;
+		}
+
+		if (windowScrollTop <= workTop) {
 			$('#nav_work, #nav_about, #nav_contact').removeClass('active');
-		} else if (windowScrollTop < aboutTop) {
+		} else if (windowScrollTop <= aboutTop) {
 			$('#nav_work').addClass('active');
 			$('#nav_about, #nav_contact').removeClass('active');
-		} else if (windowScrollTop < contactTop) {
+		} else if (windowScrollTop <= contactTop) {
 			$('#nav_about').addClass('active');
 			$('#nav_work, #nav_contact').removeClass('active');
 		} else {
@@ -62,38 +88,78 @@ $(function() {
 		}
 	}
 
-    $(window).bind('scroll', function () {
-		var windowScrollTop = $(window).scrollTop();
-		navActiveState(windowScrollTop);
+	function sizeHeaderByScrollTop(windowScrollTop) {
 
-		// scroll top threshold
-		var num = 160;
+		var scrollTopThreshold = 200;
+		var headerTop = 135;
 
-		if (windowScrollTop > num) {
-			$('header, #intro').addClass('minimized');
-			// $('.nav').addClass('fixed');
-			// $('.header-font').addClass('header-font-minimized');
-			// $('.circle').addClass('circle-minimized');
-			// $('header').addClass('header-minimized');
-			$('#subhead').hide();
-			// $('.example.hello').addClass('hello-minimized');
-
-		} else {
-			$('header, #intro').removeClass('minimized');
-			// $('.nav').removeClass('fixed');
-			// $('.header-font').removeClass('header-font-minimized');
-			// $('.circle').removeClass('circle-minimized');
-			// $('header').removeClass('header-minimized');
-			// $('#subhead').show();
+		if (isMobileWidth) {
+			scrollTopThreshold = null;
+			headerTop = 0;
 		}
+
+		// if we have a scrollTopThreshold (i.e. not mobile) AND scrollTop
+		// is less than it... 
+		//
+		if (scrollTopThreshold && (windowScrollTop < scrollTopThreshold)) {
+
+			// slide #header-bkgd up until just the right spot
+			//
+			$('#header-bkgd').css('top', -windowScrollTop);
+
+			// slide header up at half speed
+			//
+			$('header').css('top', headerTop - windowScrollTop / 2);
+
 		
-	});
+		// otherwise we've possible loaded further down the page, so set
+		// things as if it was at the threshold
+		//
+		} else if (scrollTopThreshold) {
+			$('#header-bkgd').css('top', -scrollTopThreshold);
+			$('header').css('top', headerTop - scrollTopThreshold / 2);
+		}
+
+	}
+
+	// also, run this once in case it loads narrow
+	sizeHeaderByScrollTop($(window).scrollTop());
+
+    $(window).bind('scroll', function () {
+
+	  // get the scroll top
+	  //
+      var windowScrollTop = $(window).scrollTop();
+
+	  // set active state for nav buttons based on scroll top
+	  //
+      navActiveState(windowScrollTop);
+
+	  // "shrink" header based on scroll top
+	  //
+	  sizeHeaderByScrollTop(windowScrollTop);
+
+      // scroll top threshold
+      /*
+      var num = 160;
+
+      if (windowScrollTop > num) {
+        $('header, #intro').addClass('minimized');
+        $('#subhead').hide();
+      } else {
+        $('header, #intro').removeClass('minimized');
+      }
+      */
+
+	  resetTops();
+
+    });
 
     function addScrollTo(linkId, targetId) {
     	$("#" + linkId).on('click', function(e) {
     		e.preventDefault();
     		$('html, body').animate({
-    			scrollTop: $("#" + targetId).offset().top - 150
+    			scrollTop: $("#" + targetId).offset().top - 99
     		}, 1000);
     	});
     }

@@ -28,6 +28,8 @@ $(function() {
 							    '#other-skills, ' +
 							    '#resume-box, ' +
 							    '#contact-boxes, ' +
+							    '#contact-container, ' +
+							    '#contact-center, ' +
 							    '#header-bkgd';
 
 		if ($(window).width() < 860) {

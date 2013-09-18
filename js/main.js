@@ -16,12 +16,18 @@ $(function() {
 		var toggleMobileClass = '#skills li, ' +
 		                        '#logo-block, ' +
 						        '#nav, ' +
+						        '#nav a,' +
+						        '#about-link,' +
 							    'header .column, ' +
 							    '#header-font, ' + 
 							    '#hello-block, ' +
 							    '#intro, ' +
 							    '#intro-block, ' +
 							    'header, ' +
+							    '#about-text, ' +
+							    '#other-skills, ' +
+							    '#resume-box, ' +
+							    '#contact-boxes, ' +
 							    '#header-bkgd';
 
 		if ($(window).width() < 860) {
@@ -42,11 +48,11 @@ $(function() {
 		}
 
 		if ($(window).width() <= 480) {
-			$('#other-work img').addClass('mobile');
+			$('#img-grid img').addClass('mobile');
 			// $('#subhead').hide();
 			
 		} else {
-			$('#other-work img').removeClass('mobile');
+			$('#img-grid img').removeClass('mobile');
 			// $('#subhead').show();
 			
 		}

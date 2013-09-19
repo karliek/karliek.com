@@ -32,7 +32,7 @@ $(function() {
 							    '#contact-center, ' +
 							    '#header-bkgd';
 
-		if ($(window).width() < 860) {
+		if ($(window).width() < 890) {
 			isMobileWidth = true;
 			$(toggleMobileClass).addClass('mobile');
 			$('.example div div').removeClass('column');

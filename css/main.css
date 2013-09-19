@@ -42,12 +42,12 @@ body {
  */
 
 ::-moz-selection {
-    background: #b69cd1;
+    background: #ba4d95;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b69cd1;
+    background: #ba4d95;
     text-shadow: none;
 }
 
@@ -353,7 +353,7 @@ hr.hr2 {
             font-weight: 400;
             font-size: 100pt;
             line-height: 40pt;
-            color: #c59900;
+            color: #9b7900;
         }
 
         #intro-2 {
@@ -545,7 +545,7 @@ a {
             font-weight: 400;
             font-size: 80pt;
             line-height: 60pt;
-            color: #c59900;
+            color: #9b7900;
         }
 
 a:hover {
@@ -561,7 +561,7 @@ a:hover {
 }
 
 #view-url a:hover{
-    background: #bf9e06;
+    background: #9b7900;
     padding: 4px 12px 4px 12px;
     text-decoration: none;
     color: #fff;
